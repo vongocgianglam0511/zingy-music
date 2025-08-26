@@ -25,27 +25,25 @@
 </head>
 <body>
   <!-- Nhạc -->
-  <audio id="zingyAudio" src="https://github.com/vnglam0511/zingy-music/raw/refs/heads/main/Ng%C3%A0n%20N%C4%83m%20%C3%81nh%20S%C3%A1ng%20(1).mp3"></audio>
+  <audio id="zingyAudio" src="https://raw.githubusercontent.com/<user>/<repo>/main/zingy.mp3"></audio>
 
-  <!-- Icon (ban đầu là Play) -->
-  <div id="musicIcon">
-    <!-- Play Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M8 5v14l11-7z"/>
-    </svg>
-  </div>
+  <!-- Icon -->
+  <div id="musicIcon"></div>
 
   <script>
     const audio = document.getElementById('zingyAudio');
     const iconDiv = document.getElementById('musicIcon');
 
-    // SVG code cho play & pause (luôn có fill mặc định)
+    // SVG code (Play và Pause)
     const playSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                        <path d="M8 5v14l11-7z"/>
                      </svg>`;
     const pauseSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
                       </svg>`;
+
+    // Ban đầu hiển thị nút Play
+    iconDiv.innerHTML = playSVG;
 
     iconDiv.onclick = function() {
       if (audio.paused) {
@@ -58,4 +56,4 @@
     }
   </script>
 </body>
-</html
+</html>
